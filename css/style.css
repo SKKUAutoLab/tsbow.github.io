@@ -1,69 +1,41 @@
-* {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
-
+.before,
+.after {
+  margin: 0;
 }
 
-.carousel-item img{
-	width: 100%;
-	height: 93vh;
-
-
+.before figcaption,
+.after figcaption {
+  background: #fff;
+  color: #2e3452;
+  opacity: 0.8;
+  padding: 12px;
+  position: absolute;
+  top: 10%;
+  transform: translateY(-50%);
+  line-height: 100%;
+  font-size: 18px;
 }
 
-
-.horizontal-card-img img{
-	width: 100%;
-	height: 35vh;
-
-
-
+.before figcaption {
+  left: 12px;
 }
 
-
-
-.about_img{
-	min-width: 100%;
-	max-height: 280px;
-
+.after figcaption {
+  right: 12px;
 }
 
-.my-service img{
-	width: 100%;
-	height: 100%;
+select {
+	margin: 0 auto;
+	color: #000000;
+	width: 160px;
+	height: 25px;
+	cursor: pointer;
+	text-align-last: center;
+	text-align: center;
+	-ms-text-align-last: center;
+	-moz-text-align-last: center;
 }
 
-.chekcout-my-profile{
-	background: #a6dcef;
+input {
+  width: 180px;
 }
-
-footer p{
-	margin-bottom: 0;
-}
-
-
-/*.my-service .row>*{
-	padding-right: 0;
-    padding-left: 0;
-}*/
-
-/*for responsive design*/
-/*// X-Small devices (portrait phones, less than 576px)*/
-/*// No media query for `xs` since this is the default in Bootstrap*/
-
-/*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { ... }
-
-/*// Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { ... }
-
-/*// Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { ... }
-
-/*// X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { ... }
-
-/*// XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) { ... }

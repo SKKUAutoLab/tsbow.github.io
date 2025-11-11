@@ -1,469 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compact 3D Gaussian Splatting</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    < !-- .cite {
+      background: #f0f0f0;
+      padding: 10px;
+      font-size: 18px
+    }
 
-    <!-- my css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    -->.cite {
+      padding: 0px;
+      background: #ffffff;
+      font-size: 18px
+    }
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    .card {
+      border: 1px solid #ccc
+    }
 
-    <title>Bootstrap-5.0 Template 2023</title>
+    img {
+      margin-bottom: -6px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #2196F3;
+    }
+
+    .bibtexsection {
+      width: 100%;
+      height: 20em;
+      font-family: "Courier", monospace;
+      /* font-size: 1vw; */
+      white-space: pre;
+      background-color: #f4f4f4;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .layered-paper-big {
+      /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+      box-shadow:
+        0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+        /* The top layer shadow */
+        5px 5px 0 0px #fff,
+        /* The second layer */
+        5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+        /* The second layer shadow */
+        10px 10px 0 0px #fff,
+        /* The third layer */
+        10px 10px 1px 1px rgba(0, 0, 0, 0.35),
+        /* The third layer shadow */
+        15px 15px 0 0px #fff,
+        /* The fourth layer */
+        15px 15px 1px 1px rgba(0, 0, 0, 0.35),
+        /* The fourth layer shadow */
+        20px 20px 0 0px #fff,
+        /* The fifth layer */
+        20px 20px 1px 1px rgba(0, 0, 0, 0.35),
+        /* The fifth layer shadow */
+        25px 25px 0 0px #fff,
+        /* The fifth layer */
+        25px 25px 1px 1px rgba(0, 0, 0, 0.35);
+      /* The fifth layer shadow */
+      margin-left: 10px;
+      margin-right: 60px;
+    }
+
+    table {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+    }
+
+    table> :is(thead, tbody)>tr> :is(th, td) {
+      padding: 3px;
+      text-align: center;
+    }
+
+    table>thead>tr> :is(th, td) {
+      border-top: 2px solid;
+      border-bottom: 1px solid;
+    }
+
+    table>tbody>tr:last-child> :is(th, td) {
+      border-bottom: 2px solid;
+    }
+
+    table>tbody {
+      border-top: 2px solid;
+      border-bottom: 1px solid;
+    }
+  </style>
 </head>
-<body>
-<!-- navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
-    <div class="container-fluid">
-        <a class="navbar-brand text-capitalize" href="index.html">talal wasim</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-capitalize active" href="about.html">about us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Project
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Project #1</a></li>
-                        <li><a class="dropdown-item" href="#">Project #2</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Project Demo Youtube</a></li>
-                    </ul>
-                </li>
+<body class="w3-white">
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top w3-margin-bottom" style="max-width:960px;">
 
-                <li class="nav-item">
-                    <a class="nav-link text-capitalize active" href="gallery.html">gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-capitalize active" href="contact.html">contact us</a>
-                </li>
+    <!-- The Grid -->
+    <div class="w3-row-padding">
 
-            </ul>
+      <!-- paper container -->
+      <div class="w3-display-container w3-row w3-white w3-margin-bottom">
+        <!-- <div class="w3-center">
+          <h1>Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields</h1> -->
 
-        </div>
-    </div>
-</nav>
+          <!-- <div class="w3-center">
+            <h4><b>Preprint</b> [<a href="https://github.com/maincold2/Dynamic_C3DGS/"><b>Code</b></a>] [<a href="https://arxiv.org/abs/2408.03822"><b>Paper</b></a>]</h4>
+            </div> -->
+            <div class="w3-center">
+              <h1>Compact 3D Gaussian Representation for Radiance Field</h1>
 
-<!-- navbar end-->
+              <div class="w3-center">
+                <h4><b>CVPR 2024 (Highlight)</b></h4>
+                <h4>[<a href="https://arxiv.org/abs/2311.13681"><b>Paper</b></a>] [<a
+                      href="https://arxiv.org/abs/2408.03822"><b>Extended Paper</b></a>] [<a href="https://github.com/maincold2/Compact-3DGS"><b>Code for static scenes</b></a>] [<a
+                      href="https://github.com/maincold2/Dynamic_C3DGS/"><b>Code for dynamic scenes</b></a>]</h4>
+                </div>
+                <h5><a href="https://maincold2.github.io">Joo Chan Lee</a><sup>1</sup>, <a
+                    href="https://daniel03c1.github.io">Daniel Rho</a><sup>2</sup>, <a
+                    href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=VLzxTrAAAAAJ">Xiangyu
+                    Sun</a><sup>1</sup>, <a href="https://iris.skku.edu">Jong Hwan Ko</a><sup>1</sup>, and <a
+                    href="https://silverbottlep.github.io">Eunbyung Park</a><sup>1</sup></h5>
+                <h5><sup>1</sup>Sungkyunkwan University, <sup>2</sup>KT; UNC-Chapel Hill</h5>
+              </div>
+
+              <hr>
+              <p align="justify">
+                [Update (Aug. 2024)] We have extended the compact 3D Gaussian splatting for dynamic scene representation.
+              </p>
+              <div class="w3-center">
+                <!-- <h2>Videos</h2> -->
+                <div style="width: 48.4%; display: inline-block;">
+                  <video controls style="width:100%" autoplay loop playsinline muted>
+                    <source src="videos/movingdemo_flame_salmon.mp4" type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+                <div style="width: 48.4%; display: inline-block;">
+                  <video controls style="width:100%" autoplay loop playsinline muted>
+                    <source src="videos/movingdemo_train.mp4" type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+              </div>
+              <hr>
+              <div class="w3-center">
+                <h2>Architecture for Dynamic Scenes</h2>
+              </div>
+              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                <embed src="images/fig_dyn.png" style="width:100%">
+
+              </div>
+              <!-- <div class="w3-center">
+                    <h2>Abstract</h2>
+                </div> -->
+              <p align="justify">
+                We broadens the scope of the compact 3D Gaussian representation to include dynamic scenes with significant enhancements: 1) We successfully extend
+                the learnable masking approach for Gaussians moving over time, demonstrating its wide applicability.
+                For static scenes, several methods have attempted to estimate and remove
+                non-essential Gaussians after training, yielding promising results.
+                However, removing non-essential Gaussians after training has been more challenging in dynamic scenes, as
+                it requires measuring the importance of each Gaussian over the entire duration.
+                In contrast, our proposed masking strategy simplifies the process by eliminating such complexities,
+                learning the actual rendering impact of each Gaussian across all timestamps during training iterations
+                through gradient descent.
+                2) To compactly represent the motions of Gaussians, we propose learning representative temporal
+                trajectories by applying the codebook-based approach to temporal attributes. We successfully represent
+                temporal attributes parameter-efficiently and validate that other compact representations for geometry
+                and color are applicable for dynamic scenes as well as for static scenes.
+                3) Extensive experiments and analysis demonstrate the effectiveness of our approach in dynamic settings.
+                We achieve more than a tenfold increase in parametric efficiency compared to STG, the state-of-the-art
+                method for dynamic scene representation, while maintaining comparable performance.
+              </p>
+              <hr>
+
+              <div class="w3-center">
+                <!-- <h2>Videos</h2> -->
+                <div style="width: 48%; display: inline-block;">
+                  <video controls style="width:100%" autoplay loop playsinline muted>
+                    <source src="videos/bicycle_pp.mp4" type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+                <div style="width: 48.4%; display: inline-block;">
+                  <video controls style="width:100%" autoplay loop playsinline muted>
+                    <source src="videos/drjohnson_pp.mp4" type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+              </div>
 
 
-<!-- header -->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src=".images/slider1.jpg" class="d-block w-100" alt=".images/slider1.jpg">
-            <div class="carousel-caption d-md-block">
-                <h5>First slide label</h5>
-                <p>Some WWW representative placeholder content for the first slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src=".images/slider2.jpg" class="d-block w-100" alt=".images/slider1.jpg">
-            <div class="carousel-caption d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src=".images/slider1.jpg" class="d-block w-100" alt=".images/slider1.jpg">
-            <div class="carousel-caption d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+              <hr>
+              <!-- <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                <embed src="images/fig_demo.jpg" style="width:100%">
+
+              </div>
+
+              <hr>
+              <div class="w3-center">
+                <h2>Architecture Overview</h2> -->
+              </div>
+              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                <embed src="images/fig_arch.jpg" style="width:100%">
+
+              </div>
+              <!-- <div class="w3-center">
+                    <h2>Abstract</h2>
+                </div> -->
+              <p align="justify">
+                3D Gaussian splatting (3DGS) has recently emerged as an alternative representation that leverages a 3D
+                Gaussisan-based representation and adopts the rasterization pipeline to render the images rather than
+                volumetric rendering, achieving very fast rendering speed and promising image quality.
+                However, a significant drawback arises as 3DGS entails a substantial number of 3D Gaussians to maintain
+                the high fidelity of the rendered images, which requires a large amount of memory and storage.
+                To address this critical issue, we place a specific emphasis on two key objectives: reducing the number
+                of Gaussian points without sacrificing performance and compressing the Gaussian attributes, such as
+                view-dependent color and covariance.
+                To this end, we propose a learnable mask strategy that significantly reduces the number of Gaussians
+                while preserving high performance. In addition, we propose a compact but effective representation of
+                view-dependent color by employing a grid-based neural field rather than relying on spherical harmonics.
+                Finally, we learn codebooks to compactly represent the geometric attributes of Gaussian by vector
+                quantization.
+                With model compression techniques such as quantization and entropy coding, we consistently show over 25x
+                reduced storage and enhanced rendering speed, while maintaining the quality of the scene representation,
+                compared to 3DGS.
+                Our work provides a comprehensive framework for 3D scene representation, achieving high performance,
+                fast training, compactness, and real-time rendering.
+              </p>
+
+              <hr>
+
+<!-- 
+              <div class="w3-center">
+                <h2>The effect of masking</h2>
+                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                  <embed src="images/fig_mask.jpg" style="width:45%">
+                </div>
+                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                  <embed src="images/fig_vis_mask.jpg" style="width:100%">
+                </div>
+                <p>Masking can significantly reduce the number of Gaussians while retaining high quality.</p>
+              </div>
+
+              <hr>
+              <div class="w3-center">
+                <h2>The detailed process of R-VQ</h2>
+              </div>
+              <div class="w3-display-container w3-row w3-white w3-margin-bottom">
+                <embed src="images/fig_rvq.jpg" style="width:100%">
+                <p align="justify">In the first stage, the scale and rotation vectors are compared to codes in each
+                  codebook, with the closest code identified as the result. In the next stage, the residual between the
+                  original vector and the first stage's result is compared with another codebook. This process is
+                  repeated up to the final stage.</p>
+              </div>
+              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                <embed src="images/fig_vis_rvq.jpg" style="width:50%">
+                <p align="justify">This reduces the storage requirements by approximately 30% while maintaining the
+                  quality of reconstruction, training time, and rendering speed.</p>
+              </div> -->
+
+              <div class="w3-center">
+                <h2>Results</h2>
+                <p align="justify">
+                  In addition to the end-to-end trained models (Ours), we implemented straightforward post-processing techniques
+                  on the model attributes, a variant we denote as Ours+PP. These post-processing steps include:
+                  1) Applying 8-bit min-max quantization to hash grid parameters and scalar attributes. 2) Pruning hash grid
+                  parameters with values below 0.1.
+                  3) Sorting Gaussians in Morton order.
+                  4) Applying Huffman encoding on the 8-bit quantized values (hash parameters and scalar attributes) and R-VQ indices, and compressing the results using DEFLATE
+              </div>
+              <h3>Static scenes</h3>
+              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                <embed src="images/fig_qual_s.png" style="width:100%">
+              </div>
+
+              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                <embed src="images/tab1.png" style="width:98%">
+              </div>
+
+              <div class="w3-center">
+                <!-- <h2>Videos</h2> -->
+                <div style="width: 49.5%; display: inline-block;">
+                  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                    <embed src="images/tab2.png" style="width:95%">
+                  </div>
+                </div>
+                <div style="width: 49.5%; display: inline-block;">
+                  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                    <embed src="images/tab3.png" style="width:95%">
+                  </div>
+                </div>
+              </div>
+
+              <h3>Dynamic scenes</h3>
+
+              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                <embed src="images/fig_qual_d.png" style="width:100%">
+              </div>
+
+              <div class="w3-center">
+                <!-- <h2>Videos</h2> -->
+                <div style="width: 49.5%; display: inline-block;">
+                  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                    <embed src="images/tab4.png" style="width:95%">
+                  </div>
+                </div>
+                <div style="width: 49.5%; display: inline-block;">
+                  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                    <embed src="images/tab5.png" style="width:95%">
+                  </div>
+                </div>
+              </div>
+
+
 </div>
 
-<!-- header end -->
-
-
-<!-- About Us section -->
-
-<section class="main_heading my-5">
-    <div class="text-center ">
-        <h1 class="display-4">About us</h1>
-        <hr class="w-25 mx-auto"/>
-    </div>
-
-</section>
-
-<!-- About Us section End -->
-
-<!-- container start -->
-<div class="container">
-    <!-- 1st row end -->
-    <div class="row my-5">
-        <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
-            <figure>
-                <img src=".images/g1.jpg" class="img-fluid about_img">
-            </figure>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 col-xxl-6 d-flex justify-content-center align-items-start flex-column">
-            <h1>My Journey</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button type="button" class="btn btn-outline-info" data-bs-toggle="tooltip" data-bs-placement="right"
-                    title="who am i">Learn More
-            </button>
-        </div>
-    </div>
-    <!-- 1st row end -->
-
-
-    <!-- second row -->
-    <div class="row my-5">
-        <div class="col-lg-6 col-md-6 col-12 col-xxl-6 d-flex justify-content-center align-items-start flex-column">
-            <h1>My Journey</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. </p>
-            <button type="button" class="btn btn-outline-info">Learn More</button>
-        </div>
-
-        <div class="col-lg-6 col-md-6 col-12 col-xxl-6 my-5">
-            <figure>
-                <img src=".images/slider3.jpg" class="img-fluid about_img">
-            </figure>
-        </div>
-
-    </div>
-
-    <!-- second row -->
-
+<hr>
+<div class="w3-center">
+<h2>Bibtex</h2>
 </div>
-<!-- container end-->
+<textarea class="bibtexsection" readonly>
+@article{Lee_2024_C3DGS,
+  title={Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields},
+  author={Lee, Joo Chan and Rho, Daniel and Sun, Xiangyu and Ko, Jong Hwan and Park, Eunbyung},
+  journal={arXiv preprint arXiv:2408.03822},
+  year={2024}
+}
+@InProceedings{Lee_2024_CVPR,
+  author    = {Lee, Joo Chan and Rho, Daniel and Sun, Xiangyu and Ko, Jong Hwan and Park, Eunbyung},
+  title     = {Compact 3D Gaussian Representation for Radiance Field},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2024},
+  pages     = {21719-21728}
+}</textarea>
 
-
-<!-- our services section Start-->
-
-<section class="main_heading my-5 pt-5 bg-light">
-    <div class="text-center ">
-        <h1 class="display-4">Our Services </h1>
-        <hr class="w-25 mx-auto"/>
-    </div>
-
-
-    <div class="container my-service">
-        <div class="row  my-5">
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row">
-                        <div class="col-md-4 horizontal-card-img">
-                            <img src=".images/h1.jpg" class="img-fluid rounded-start" alt=".images/g1.jpg">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <hr>
+            <div class="w3-center">
+              <p class="text-justify">
+                We used the project page of <a href="https://daniel03c1.github.io/masked_wavelet_nerf/">Masked Wavelet
+                  NeRF</a> as a template.
+              </p>
             </div>
+          </div>
+          <!-- end paper container -->
 
-
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row">
-                        <div class="col-md-4 horizontal-card-img">
-                            <img src=".images/h1.jpg" class="img-fluid rounded-start" alt=".images/g1.jpg">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row">
-                        <div class="col-md-4 horizontal-card-img">
-                            <img src=".images/h1.jpg" class="img-fluid rounded-start" alt=".images/g1.jpg">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xxl-12 text-center my-5">
-                <button type="button" class="btn btn-outline-info" data-bs-toggle="tooltip" data-bs-placement="right"
-                        title="who am i">Learn More
-                </button>
-            </div>
-
-        </div>
-
-    </div>
-
-
-</section>
-
-<!-- our services section End -->
-
-
-<!-- Gallery section start-->
-
-<section class="main_heading my-5 mt-5">
-    <div class="text-center ">
-        <h1 class="display-4">Gellery</h1>
-        <hr class="w-25 mx-auto"/>
-    </div>
-
-    <div class="container">
-        <div class="row gy-2 my-5">
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/slider1.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/slider2.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/slider1.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/slider2.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/g1.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/slider1.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/slider2.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/slider1.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-            <div class="col-md-4 col-10 col-xxl-4 mx-auto">
-                <figure>
-                    <img src=".images/slider2.jpg" alt="Gellery" class="img-fluid">
-                </figure>
-            </div>
-
-        </div>
-    </div>
-
-</section>
-
-<!-- Gellery section End -->
-
-
-<!-- new section start-->
-
-
-<section class="main_heading my-5 py-2 chekcout-my-profile">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xxl-12 col-12 py-5 text-center">
-                <h1 class="text-white">Check out my Git Profile</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <button type="button" class="btn btn-outline-light">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-arrow-right-square" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                              d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg>
-                    Learn More
-                </button>
-
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- new section end-->
-
-
-<!-- ContactUs section start-->
-
-<section class="main_heading my-5 mt-5">
-    <div class="text-center ">
-        <h1 class="display-4">Contact Us</h1>
-        <hr class="w-25 mx-auto"/>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xxl-8 col-md-8  col-10 mx-auto">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Gender</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                   value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">City</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Select City</option>
-                            <option value="1">Dhaka</option>
-                            <option value="2">Rangpur</option>
-                            <option value="3">Chittagong</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Put here short details</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Upload file</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                    </div>
-
-
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-
-            </div>
-
-        </div>
-    </div>
-
-</section>
-<!-- ContactUs section end-->
-
-
-<!-- footer section start-->
-<footer class="bg-secondary text-center text-white">
-    <p>@copyright <strong>Md. Talal Wasim (Full Stack - Software Engineer)</strong></p>
-
-
-</footer>
-
-<!-- footer section end-->
-
-
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-<script type="text/javascript">
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-</script>
-
+        </div><!-- End Grid -->
+      </div><!-- End Page Container -->
 
 </body>
+<script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@7/dist/styles.css" />
+
 </html>
