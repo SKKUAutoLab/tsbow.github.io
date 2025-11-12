@@ -111,6 +111,36 @@ summary {
 
 
 
+/* Comparison details */
+
+.datasets-comparison-details {
+  margin: 20px 0;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.datasets-comparison-details summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.datasets-comparison-details[open] {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.datasets-comparison-details[open] summary::after {
+  content: " ▲";
+}
+.datasets-comparison-details:not([open]) summary::after {
+  content: " ▼";
+}
+
 
 
 /* Button URL */
