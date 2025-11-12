@@ -41,6 +41,18 @@ input {
 }
 
 
+/* View */
+.para-bi-margin {
+  margin-left: 0px; /* 20px top/bottom, 40px left/right */
+  margin-right: 0px;
+}
+
+.caption-bi-margin {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
 /* Overview --- Statistics */
 .stats {
   display: grid;
