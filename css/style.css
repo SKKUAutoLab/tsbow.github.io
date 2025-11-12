@@ -124,9 +124,14 @@ summary {
 }
 
 .btn img {
-  width: 20px;
-  height: 20px;
-  filter: invert(1); /* makes dark icons white for dark background */
+  width: 24px;    /* 👈 change this to resize the icons */
+  height: 24px;   /* keep proportional scaling */
+  object-fit: contain;
+  border-radius: 4px; /* optional: soft rounded corners for icons */
+}
+
+.btn span {
+  font-size: 16px;
 }
 
 .btn:hover {
