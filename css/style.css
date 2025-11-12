@@ -39,3 +39,36 @@ select {
 input {
   width: 180px;
 }
+
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.stat h2 {
+  grid-row: 1;
+  font-size: 50px;          
+  line-height: 1;
+  position: relative;
+  top: 20px;                /* pushes text down slightly */
+  margin: 0;
+  font-weight: 700;
+}
+
+.stat p {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.stat:nth-child(1) { grid-column: 1; }
+.stat:nth-child(2) { grid-column: 2; }
+.stat:nth-child(3) { grid-column: 3; }
+.stat:nth-child(4) { grid-column: 4; }
+.stat:nth-child(5) { grid-column: 5; }
+.stat:nth-child(6) { grid-column: 6; }
