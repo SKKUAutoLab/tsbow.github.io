@@ -50,6 +50,7 @@ input {
 }
 
 .caption-bi-margin {
+  font-size: 16px;
   margin-left: 10px;
   margin-right: 10px;
   text-align: justify;
