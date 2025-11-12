@@ -41,6 +41,7 @@ input {
 }
 
 
+/* Overview --- Statistics */
 .stats {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -54,9 +55,9 @@ input {
   font-size: 50px;          
   line-height: 1;
   position: relative;
-  top: 5px;                /* pushes text down slightly */
+  top: 1px;                /* pushes text down slightly */
   margin: 0;
-  font-weight: 700;
+  font-weight: 650;
 }
 
 .stat p {
@@ -73,3 +74,18 @@ input {
 .stat:nth-child(4) { grid-column: 4; }
 .stat:nth-child(5) { grid-column: 5; }
 .stat:nth-child(6) { grid-column: 6; }
+
+
+/* Abstract */
+
+details {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
