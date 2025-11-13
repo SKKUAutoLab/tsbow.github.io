@@ -40,6 +40,13 @@ input {
   width: 180px;
 }
 
+.section-header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #000080;  /* navy color */
+  font-weight: bold;
+}
+
 
 /* MARK: View */
 .para-bi-margin {
@@ -138,28 +145,28 @@ summary {
 
 /* MARK: Citation */
 
-.citation-section {
+/* .citation-section {
   background: linear-gradient(135deg, #f7faff 0%, #eef5ff 100%);
   padding: 60px 20px;
   border-top: 2px solid #007acc;
   border-bottom: 2px solid #007acc;
   font-family: "Segoe UI", Roboto, sans-serif;
-}
+} */
 
-.citation-header h2 {
+/* .citation-header h2 {
   font-size: 2em;
   margin-bottom: 10px;
-  color: #007acc;
-}
+  color: #000080; 
+} */
 
-.citation-header p {
+/* .citation-header p {
   font-size: 1.1em;
   color: #333;
-}
+} */
 
 .bibtex-box {
   position: relative;
-  background-color: #ababfa;
+  background-color: #b5b5fa;
   color: #000000;
   border-radius: 10px;
   padding: 20px 30px;
