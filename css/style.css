@@ -239,7 +239,8 @@ body {
 #scrollHeader nav a {
   color: white;
   text-decoration: none;
-  margin-left: 30px;
+  margin-left: 10px;
+  font-size: 27px;
   font-weight: bold;
   /* top: 10px; */
 }
