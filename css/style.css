@@ -159,7 +159,7 @@ summary {
 
 .bibtex-box {
   position: relative;
-  background-color: #cccccc;
+  background-color: #ababfa;
   color: #000000;
   border-radius: 10px;
   padding: 20px 30px;
@@ -237,7 +237,7 @@ body {
 #scrollHeader nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 25px;
   font-weight: bold;
   top: 10px;
 }
@@ -246,7 +246,7 @@ body {
   margin: 0;
   font-size: 35px;
   font-weight: bold;
-  top: 10px;
+  top: 16px;
 }
 
 #scrollHeader nav a:hover {
@@ -261,9 +261,9 @@ body {
 }
 
 .header-left .logo {
-  width: 40px;        /* ✅ resize icon */
-  height: 40px;
-  top: -5px;
+  width: 45px;        /* ✅ resize icon */
+  height: 45px;
+  top: -7px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
