@@ -159,7 +159,7 @@ body {
   width: 100%;
   background-color: #000080;
   color: white;
-  padding: 10px 25px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,7 +171,7 @@ body {
 #scrollHeader nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 25px;
   font-weight: bold;
 }
 
@@ -184,6 +184,7 @@ body {
 #scrollHeader nav a:hover {
   opacity: 0.8;
   color: rgb(255, 255, 0);
+  text-decoration: underline;
 }
 
 .header-left {
@@ -245,7 +246,7 @@ body {
 }
 
 /* MARK: Mobile Ver */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   #scrollHeader h1 {
     font-size: 18px;
   }
@@ -253,4 +254,4 @@ body {
     width: 30px;
     height: 30px;
   }
-}
+} */
