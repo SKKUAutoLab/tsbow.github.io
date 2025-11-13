@@ -1,5 +1,18 @@
 base_url = "https://huggingface.co/datasets/skku-autolab/TSBOW"
 
+let prevScrollPos = window.scrollY;
+const header = document.getElementById("scrollHeader");
+
+window.addEventListener("scroll", () => {
+const currentScrollPos = window.scrollY;
+if (prevScrollPos > currentScrollPos) {
+    header.style.top = "0";       // show when scrolling up
+} else {
+    header.style.top = "-80px";   // hide when scrolling down
+}
+prevScrollPos = currentScrollPos;
+});
+
 // function select_model(target, dir, dataset, scene) { 
 //     if (dir == "left"){
 //         var img = document.getElementById("left_img" + "_" + dataset + "_" + scene);

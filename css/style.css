@@ -143,6 +143,36 @@ summary {
 
 
 
+/* MARK: Scroll Header */
+
+#scrollHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007acc;
+  color: white;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.3s;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#scrollHeader nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+#scrollHeader nav a:hover {
+  opacity: 0.8;
+}
+
+
 /* MARK: Button URL */
 .resources {
   text-align: center;

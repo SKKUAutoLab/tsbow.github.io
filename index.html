@@ -111,15 +111,16 @@
     </head>
 
     <body class="w3-white">
-        <!-- <header id="scrollHeader">
+        <header id="scrollHeader">
             <h1>TSBOW</h1>
             <nav>
                 <a href="#overview">Overview</a>
-                <a href="#dataset">Dataset</a>
-                <a href="#results">Results</a>
-                <a href="#contact">Contact</a>
+                <a href="#scenes">Scenes</a>
+                <a href="#pipelines">Pipelines</a>
+                <a href="#statistics">Statistics</a>
+                <a href="#citation">Citation</a>
             </nav>
-        </header> -->
+        </header>
 
         <!-- Page Container -->
         <div class="w3-content w3-margin-top w3-margin-bottom" style="max-width:960px;">
@@ -193,134 +194,144 @@
                     <hr>
                     
                     <!-- MARK: Overview -->
-                    <div class="w3-center">
-                        <h1><b>Overview</b></h1>
-                        
-                        <!-- Dataset Stats -->
-                        <div class="stats">
-                            <div class="stat">
-                                <h2>198</h2>
-                                <p>Processed Videos</p>
+                    <section id="overview">
+                        <div class="w3-center">
+                            <h1><b>Overview</b></h1>
+                            
+                            <!-- Dataset Stats -->
+                            <div class="stats">
+                                <div class="stat">
+                                    <h2>198</h2>
+                                    <p>Processed Videos</p>
+                                </div>
+                                <div class="stat">
+                                    <h2>32h</h2>
+                                    <p>Duration</p>
+                                </div>
+                                <div class="stat">
+                                    <h2>3.2M</h2>
+                                    <p>Total Frames</p>
+                                </div>
+                                <div class="stat">
+                                    <h2>71.1M</h2>
+                                    <p>Semi-Annotated Objects</p>
+                                </div>
+                                <div class="stat">
+                                    <h2>48K</h2>
+                                    <p>Manual-Annotated Images</p>
+                                </div>
+                                <div class="stat">
+                                    <h2>1.1M</h2>
+                                    <p>Manual-Annotated Objects</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <h2>32h</h2>
-                                <p>Duration</p>
-                            </div>
-                            <div class="stat">
-                                <h2>3.2M</h2>
-                                <p>Total Frames</p>
-                            </div>
-                            <div class="stat">
-                                <h2>71.1M</h2>
-                                <p>Semi-Annotated Objects</p>
-                            </div>
-                            <div class="stat">
-                                <h2>48K</h2>
-                                <p>Manual-Annotated Images</p>
-                            </div>
-                            <div class="stat">
-                                <h2>1.1M</h2>
-                                <p>Manual-Annotated Objects</p>
-                            </div>
-                        </div>
-                        <!-- End of Dataset Stats -->
+                            <!-- End of Dataset Stats -->
 
-                        <div style="width: 100%; display: inline-block;">
-                            <video controls style="width:100%" autoplay loop playsinline muted>
-                                <source src="videos/road_intersection_conversion.mp4" type="video/mp4">
-                                Video Demo
-                            </video>
+                            <div style="width: 100%; display: inline-block;">
+                                <video controls style="width:100%" autoplay loop playsinline muted>
+                                    <source src="videos/road_intersection_conversion.mp4" type="video/mp4">
+                                    Video Demo
+                                </video>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                     <!-- End of Overview -->
 
                     <hr>
 
                     <!-- MARK: Scenes -->
-                    <div class="w3-center">
-                        <h1><b>Scenes from the TSBOW dataset</b></h1>
-                    </div>
+                    <section id="scenes">
+                        <div class="w3-center">
+                            <h1><b>Scenes from the TSBOW dataset</b></h1>
+                        </div>
 
-                    <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                        <embed src="images/Figure_All_Scenes.png" style="width:100%">
-                    </div>
-                    <p class="caption-bi-margin">Scenes from the TSBOW dataset, comprising 198 videos recorded across four distinct scenarios spanning all seasons (sunny/cloudy, haze/fog, rain, snow) over a year. The dataset emphasizes adverse weather conditions and densely populated urban areas with heavy traffic, addressing significant challenges in image degradation and vehicle occlusion.</p>
+                        <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                            <embed src="images/Figure_All_Scenes.png" style="width:100%">
+                        </div>
+                        <p class="caption-bi-margin">Scenes from the TSBOW dataset, comprising 198 videos recorded across four distinct scenarios spanning all seasons (sunny/cloudy, haze/fog, rain, snow) over a year. The dataset emphasizes adverse weather conditions and densely populated urban areas with heavy traffic, addressing significant challenges in image degradation and vehicle occlusion.</p>
+                    </section>
                     <!-- End of Scenes -->
 
                     <hr>
 
                     <!-- MARK: Pipelines -->
-                    <div class="w3-center">
-                        <h1><b>Annotation Pipelines</b></h1>
-                    </div>
+                    <section id="pipelines">
+                        <div class="w3-center">
+                            <h1><b>Annotation Pipelines</b></h1>
+                        </div>
 
-                    <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                        <embed src="images/Figure_Pipelines.png" style="width:100%">
-                    </div>
-                    <p class="caption-bi-margin">Detailed overview of the data collection and annotation pipeline. The process commences with the recording and categorization of videos during the data collection phase. Subsequently, the videos are preprocessed and allocated to a team of annotators for manual labeling. Next, a state-of-the-art model is fine-tuned to automatically annotate the remaining frames. The resulting annotations are then verified against predefined labeling criteria. Finally, the annotated instances are aggregated and undergo post-processing to finalize the dataset.</p>
+                        <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                            <embed src="images/Figure_Pipelines.png" style="width:100%">
+                        </div>
+                        <p class="caption-bi-margin">Detailed overview of the data collection and annotation pipeline. The process commences with the recording and categorization of videos during the data collection phase. Subsequently, the videos are preprocessed and allocated to a team of annotators for manual labeling. Next, a state-of-the-art model is fine-tuned to automatically annotate the remaining frames. The resulting annotations are then verified against predefined labeling criteria. Finally, the annotated instances are aggregated and undergo post-processing to finalize the dataset.</p>
+                    </section>
                     <!-- End of Pipelines -->
 
                     <hr>
 
                     <!-- MARK: Statistics -->
-                     <div class="w3-center">
-                        <h1><b>Statistics</b></h1>
-                    </div>
+                    <section id="statistics">
+                        <div class="w3-center">
+                            <h1><b>Statistics</b></h1>
+                        </div>
 
-                    <div class="w3-center">
-                        <!-- <h2>Videos</h2> -->
-                        <div style="width: 49.5%; display: inline-block;">
-                            <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                                <embed src="images/Figure_Suwon_Camera_Map.png" style="width:95%">
-                                <p class="caption-bi-margin">Suwon recording locations in TSBOW dataset</p>
+                        <div class="w3-center">
+                            <!-- <h2>Videos</h2> -->
+                            <div style="width: 49.5%; display: inline-block;">
+                                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                                    <embed src="images/Figure_Suwon_Camera_Map.png" style="width:95%">
+                                    <p class="caption-bi-margin">Suwon recording locations in TSBOW dataset</p>
+                                </div>
+                            </div>
+                            <div style="width: 49.5%; display: inline-block;">
+                                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                                    <embed src="images/Figure_Challenges.png" style="width:95%">
+                                        <p class="caption-bi-margin">Challenges by Weather Conditions in TSBOW</p>
+                                </div>
                             </div>
                         </div>
-                        <div style="width: 49.5%; display: inline-block;">
+
+                        <details class="datasets-comparison-details">
+                            <summary>Comparison of traffic surveillance datasets</summary>
+
                             <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                                <embed src="images/Figure_Challenges.png" style="width:95%">
-                                    <p class="caption-bi-margin">Challenges by Weather Conditions in TSBOW</p>
+                                <figure style="margin: 0; text-align: center;">
+                                    <img src="images/Table_1.png" alt="Comparison of traffic surveillance datasets" style="width:100%; max-width:900px;">
+                                    <figcaption style="font-size:14px; color:#555; margin-top:8px;">
+                                        Table 1.Comparison of traffic surveillance datasets.
+                                    </figcaption>
+                                </figure>
                             </div>
-                        </div>
-                    </div>
-
-                    <details class="datasets-comparison-details">
-                        <summary>Comparison of traffic surveillance datasets</summary>
-
-                        <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                            <figure style="margin: 0; text-align: center;">
-                                <img src="images/Table_1.png" alt="Comparison of traffic surveillance datasets" style="width:100%; max-width:900px;">
-                                <figcaption style="font-size:14px; color:#555; margin-top:8px;">
-                                    Table 1.Comparison of traffic surveillance datasets.
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </details>
+                        </details>
+                    </section>
                     <!-- End of Statistics -->
 
                     <hr>
 
-                    <!-- MARK: Abstract -->
-                    <div class="w3-center">
-                        <h2>Abstract</h2>
-                    </div>
+                    <section id="abtract-conclusion">
+                        <!-- MARK: Abstract -->
+                        <div class="w3-center">
+                            <h2>Abstract</h2>
+                        </div>
 
-                    <details class="para-bi-margin">
-                        <summary>Show more</summary>
-                        Global warming has intensified the frequency and severity of extreme weather events, which degrade CCTV signal and video quality while disrupting traffic flow, thereby increasing traffic accident rates. Existing datasets, often limited to light haze, rain, and snow, fail to capture extreme weather conditions. To address this gap, this study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive dataset designed to enhance occluded vehicle detection across diverse annual weather scenarios. Comprising over 32 hours of real-world traffic data from densely populated urban areas, TSBOW includes more than 48,000 manually annotated bounding boxes and 3.2 million semi-labeled boxes, spanning eight traffic participant classes, ranging from large vehicles to micromobility devices and pedestrians. We establish an object detection benchmark for TSBOW, highlighting challenges posed by occlusions and adverse weather. With its varied road types, scales, and viewpoints, TSBOW serves as a critical resource for advancing Intelligent Transportation Systems. Our findings underscore the potential of CCTV-based traffic monitoring, paving the way for new research and applications.
-                    </details>
-                    <!-- End of Abstract -->
+                        <details class="para-bi-margin">
+                            <summary>Show more</summary>
+                            Global warming has intensified the frequency and severity of extreme weather events, which degrade CCTV signal and video quality while disrupting traffic flow, thereby increasing traffic accident rates. Existing datasets, often limited to light haze, rain, and snow, fail to capture extreme weather conditions. To address this gap, this study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive dataset designed to enhance occluded vehicle detection across diverse annual weather scenarios. Comprising over 32 hours of real-world traffic data from densely populated urban areas, TSBOW includes more than 48,000 manually annotated bounding boxes and 3.2 million semi-labeled boxes, spanning eight traffic participant classes, ranging from large vehicles to micromobility devices and pedestrians. We establish an object detection benchmark for TSBOW, highlighting challenges posed by occlusions and adverse weather. With its varied road types, scales, and viewpoints, TSBOW serves as a critical resource for advancing Intelligent Transportation Systems. Our findings underscore the potential of CCTV-based traffic monitoring, paving the way for new research and applications.
+                        </details>
+                        <!-- End of Abstract -->
 
 
-                    <!-- MARK: Conclusion and Future Works -->
-                    <div class="w3-center">
-                        <h2>Conclusion and Future Works</h2>
-                    </div>
+                        <!-- MARK: Conclusion and Future Works -->
+                        <div class="w3-center">
+                            <h2>Conclusion and Future Works</h2>
+                        </div>
 
-                    <details class="para-bi-margin">
-                        <summary>Show more</summary>
-                        This study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive, semi-automatically annotated traffic surveillance dataset designed to improve monitoring system training, particularly under extreme weather conditions such as heavy haze and snow. Collected across all seasons and diverse road scenarios, TSBOW comprises 32 hours of footage from 198 videos, encompassing a variety of road types and scales, and providing multiple viewing angles for vehicles and pedestrians. The dataset includes over 3.2 million frames, each annotated with weather conditions and scenarios, alongside detailed object annotations derived from extracted images. Capturing complex, high-density scenes of vehicles and pedestrians in crowded urban settings, TSBOW features approximately 71.1 million bounding boxes across eight distinct traffic participant classes. As a robust resource for traffic surveillance research, TSBOW offers substantial potential to deepen insights into traffic dynamics and support advancements in intelligent transportation systems. The initial version focuses on daytime traffic flow under varying weather conditions. Future versions will include ground truth annotations for nighttime scenarios and additional computer vision tasks, such as multi-object tracking, semantic segmentation, vehicle counting, and speed estimation, to further enhance its utility.
-                    </details>
-                    <!-- End of Conclusion and Future Works -->
+                        <details class="para-bi-margin">
+                            <summary>Show more</summary>
+                            This study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive, semi-automatically annotated traffic surveillance dataset designed to improve monitoring system training, particularly under extreme weather conditions such as heavy haze and snow. Collected across all seasons and diverse road scenarios, TSBOW comprises 32 hours of footage from 198 videos, encompassing a variety of road types and scales, and providing multiple viewing angles for vehicles and pedestrians. The dataset includes over 3.2 million frames, each annotated with weather conditions and scenarios, alongside detailed object annotations derived from extracted images. Capturing complex, high-density scenes of vehicles and pedestrians in crowded urban settings, TSBOW features approximately 71.1 million bounding boxes across eight distinct traffic participant classes. As a robust resource for traffic surveillance research, TSBOW offers substantial potential to deepen insights into traffic dynamics and support advancements in intelligent transportation systems. The initial version focuses on daytime traffic flow under varying weather conditions. Future versions will include ground truth annotations for nighttime scenarios and additional computer vision tasks, such as multi-object tracking, semantic segmentation, vehicle counting, and speed estimation, to further enhance its utility.
+                        </details>
+                        <!-- End of Conclusion and Future Works -->
+                    </section>
 
                     <hr>
 
@@ -404,21 +415,23 @@
 
                     <hr>
 
-                    <div class="w3-center">
-                        <h2>Cite Our Work</h2>
-                    </div>
+                    <section id="citation">
+                        <div class="w3-center">
+                            <h2>Cite Our Work</h2>
+                        </div>
 
-                    <h4>If our research is helpful to you, please cite our paper using the following BibTeX format</h4>
-                    
-                    <h3>BibTeX</h3>
-                    <pre><code>
+                        <h4>If our research is helpful to you, please cite our paper using the following BibTeX format</h4>
+                        
+                        <h3>BibTeX</h3>
+                        <pre><code>
     @article{Huynh_TSBOW_AAAI_2026,
         title   = {TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles Under VariousWeather Conditions},
         author  = {Ngoc Huynh, Duong Tran, Long Pham, Tai Tran, Hung Nguyen, Trinh Le, Chi Tran, Duong Vu, Son Phan, Quoc Ho, Min Jeon, Joon Jeon, JaeWook Jeon},
         journal = {AAAI 2026},
         year    = {2025}
     }
-                    </code></pre>
+                        </code></pre>
+                    </section>
 
                     <hr>
                     
