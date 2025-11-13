@@ -213,7 +213,7 @@ summary {
 
 body {
   margin: 0;
-  font-size: 27px;
+  /* font-size: 27px; */
   /* font-family: Arial, sans-serif; */
 }
 
@@ -225,7 +225,7 @@ body {
   width: 100%;
   background-color: #000080;
   color: white;
-  padding: 10px 30px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -237,7 +237,7 @@ body {
 #scrollHeader nav a {
   color: white;
   text-decoration: none;
-  margin-left: 16px;
+  margin-left: 20px;
   font-weight: bold;
 }
 
@@ -262,6 +262,7 @@ body {
 .header-left .logo {
   width: 40px;        /* ✅ resize icon */
   height: 40px;
+  top: -5px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
