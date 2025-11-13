@@ -134,14 +134,6 @@ summary {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* .datasets-comparison-details[open] summary::after {
-  content: " ▲";
-}
-.datasets-comparison-details:not([open]) summary::after {
-  content: " ▼";
-} */
-
-
 
 /* MARK: Scroll Header */
 
@@ -171,7 +163,7 @@ body {
 #scrollHeader nav a {
   color: white;
   text-decoration: none;
-  margin-left: 25px;
+  margin-left: 20px;
   font-weight: bold;
 }
 
@@ -193,8 +185,8 @@ body {
 }
 
 .header-left .logo {
-  width: 10px;        /* ✅ resize icon */
-  height: 10px;
+  width: 35px;        /* ✅ resize icon */
+  height: 35px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
@@ -242,7 +234,8 @@ body {
 
 .btn:hover {
   background-color: #1292e7;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  text-decoration: underline;
 }
 
 /* MARK: Mobile Ver */
