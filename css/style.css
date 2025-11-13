@@ -147,13 +147,14 @@ summary {
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-size: 16px;
+  /* font-family: Arial, sans-serif; */
 }
 
 /* Hidden by default */
 #scrollHeader {
   position: fixed;
-  top: -80px;  /* 👈 start hidden above page */
+  top: -90px;  /* 👈 start hidden above page */
   left: 0;
   width: 100%;
   background-color: #007acc;
@@ -176,6 +177,7 @@ body {
 
 #scrollHeader nav a:hover {
   opacity: 0.8;
+  color: rgb(255, 251, 0);
 }
 
 
