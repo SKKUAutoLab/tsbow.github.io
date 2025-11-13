@@ -41,7 +41,7 @@ input {
 }
 
 
-/* View */
+/* MARK: View */
 .para-bi-margin {
   margin-left: 0px; /* 20px top/bottom, 40px left/right */
   margin-right: 0px;
@@ -58,7 +58,7 @@ input {
 }
 
 
-/* Overview --- Statistics */
+/* MARK: Overview --- Statistics */
 .stats {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -93,7 +93,7 @@ input {
 .stat:nth-child(6) { grid-column: 6; }
 
 
-/* Abstract */
+/* MARK: Abstract */
 
 details {
   margin: 1em 0;
@@ -111,7 +111,7 @@ summary {
 
 
 
-/* Comparison details */
+/* MARK: Comparison details */
 
 .datasets-comparison-details {
   margin: 20px 0;
@@ -143,7 +143,7 @@ summary {
 
 
 
-/* Button URL */
+/* MARK: Button URL */
 .resources {
   text-align: center;
   margin-top: 30px;
