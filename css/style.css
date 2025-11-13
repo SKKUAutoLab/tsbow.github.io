@@ -171,7 +171,7 @@ summary {
 
 .bibtex-box {
   position: relative;
-  background-color: #b5b5fa;
+  background-color: #bcbcff;
   color: #000000;
   border-radius: 10px;
   padding: 20px 30px;
@@ -275,7 +275,7 @@ body {
 .header-left .logo {
   width: 45px;        /* ✅ resize icon */
   height: 45px;
-  top: -11px;
+  top: -15px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
@@ -323,7 +323,7 @@ body {
 
 .btn:hover {
   background-color: #000080 ;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
   text-decoration: underline;
 }
 
