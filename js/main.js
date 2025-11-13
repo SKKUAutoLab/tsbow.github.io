@@ -1,5 +1,7 @@
 base_url = "https://huggingface.co/datasets/skku-autolab/TSBOW"
 
+
+// scroll header
 const header = document.getElementById("scrollHeader");
 let prevScrollPos = window.scrollY;
 
@@ -24,6 +26,20 @@ else
 
 prevScrollPos = currentScrollPos;
 });
+
+
+// citation
+  function copyBibtex() {
+    const code = document.querySelector("#citation pre code").innerText;
+    navigator.clipboard.writeText(code);
+    const btn = document.querySelector(".copy-btn");
+    btn.innerText = "✅ Copied!";
+    setTimeout(() => btn.innerText = "📋 Copy", 2000);
+  }
+
+
+
+
 
 
 // function select_model(target, dir, dataset, scene) { 

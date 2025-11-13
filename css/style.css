@@ -135,6 +135,80 @@ summary {
 }
 
 
+
+/* MARK: Citation */
+
+.citation-section {
+  background: linear-gradient(135deg, #f7faff 0%, #eef5ff 100%);
+  padding: 60px 20px;
+  border-top: 2px solid #007acc;
+  border-bottom: 2px solid #007acc;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.citation-header h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #007acc;
+}
+
+.citation-header p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.bibtex-box {
+  position: relative;
+  background-color: #1e1e1e;
+  color: #eaeaea;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin: 30px auto;
+  max-width: 900px;
+  font-family: "Courier New", monospace;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.bibtex-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bibtex-header .bibtex-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.bibtex-box pre {
+  overflow-x: auto;
+  font-size: 15px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.copy-btn:hover {
+  background: #005fa3;
+}
+
+
+
 /* MARK: Scroll Header */
 
 body {
