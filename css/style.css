@@ -283,6 +283,7 @@ body {
   text-align: center;
   margin-top: 60px;
   font-size: 14px;
+  font-weight: bold;
 
   /* opacity: 0; */
   transition: opacity 0.8s ease;
