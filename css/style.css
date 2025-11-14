@@ -333,8 +333,8 @@ body {
 
 #tsbow-title span:hover {
     color: #0000db;       /* highlight color */
-    transform: scale(1.15) translateY(-3px);
-    opacity: 0.9;
+    transform: scale(1.2) translateY(-5px);
+    /* opacity: 0.9; */
 }
 
 /* -- Traffic Surveillance... */
