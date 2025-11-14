@@ -333,7 +333,7 @@ body {
       transform  0.25s ease-out,
       opacity 0.25s ease;
     cursor: default;
-    /* margin-right: -2px;  */
+    margin-right: -3px; 
 }
 
 #tsbow-title span:hover {
