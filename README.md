@@ -1,4 +1,39 @@
-# TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles Under VariousWeather Conditions
+<!-- title -->
+<h1 align='center'>
+    TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles Under VariousWeather Conditions
+</h1>
+
+<!-- authors -->
+<div align='center'>
+    <a href="https://scholar.google.com/citations?user=pCTUkWwAAAAJ">
+        Ngoc Doan-Minh Huynh</a> &emsp;
+    <a href="https://scholar.google.com/citations?user=crRQGUAAAAAJ">
+        Duong Nguyen-Ngoc Tran</a>  &emsp;
+    <a href="https://scholar.google.com/citations?user=xPyle9AAAAAJ">
+        Long Hoang Pham</a>     &emsp;
+    Tai Huu-Phuong Tran
+</div>
+
+<div align='center'>
+    Huy-Hung Nguyen     &emsp;
+    Trinh Le Ba Khanh   &emsp;
+    Chi Dai Tran        &emsp;
+    Duong Khac Vu       &emsp;
+    Son Hong Phan   
+</div>
+
+<div align='center'>
+    Quoc Pham-Nam Ho    &emsp;
+    Hyung-Min Jeon      &emsp; 
+    Hyung-Joon Jeon     &emsp;
+    <a href="https://scholar.google.com/citations?user=9z0SfKoAAAAJ">
+        Jae Wook Jeon</a>
+</div>
+
+<!-- affliation -->
+<div align='center'>
+    <a href="https://micro.skku.ac.kr/micro/index.do">Automation Lab</a>, Sungkyunkwan University
+</div>
 
 (UPDATING....) 
 
