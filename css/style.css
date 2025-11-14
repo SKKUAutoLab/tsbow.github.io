@@ -40,21 +40,30 @@ input {
   width: 180px;
 }
 
+/* Anchor offset for fixed header */
+section {
+  scroll-margin-top: 110px;
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 7px;
+  margin-top: -7px;
+  pointer-events: none;
+}
+
 .section-header h1 {
   font-size: 3em;
   margin-bottom: 10px;
   color: #000080;  /* navy color */
   font-weight: bold;
   margin-top: 50px;
-
-  scroll-margin-top: 60px;
 }
 
 .section-header h2 {
   color: #000080;  /* navy color */
   font-weight: bold;
-
-  scroll-margin-top: 60px;
 }
 
 
