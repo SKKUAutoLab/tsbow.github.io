@@ -277,7 +277,7 @@ body {
 
 .footer {
   width: 100%;
-  padding: 20px;
+  padding: 40px;
   background: #000080;
   color: #fff;
   text-align: center;
@@ -293,13 +293,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px; /* space between elements */
+  gap: 50px; /* space between elements */
 }
 
 .footer-icon {
   width: 60px;   /* adjust size */
   height: auto;
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 .footer .ascii {
