@@ -6,7 +6,7 @@ const title = document.getElementById("titleText");
 title.innerHTML = title.textContent.replace(/([A-Z])/g, '<span class="uuc">$1</span>');
 
 
-// scroll header
+// header
 const header = document.getElementById("scrollHeader");
 let prevScrollPos = window.scrollY;
 
@@ -34,17 +34,26 @@ prevScrollPos = currentScrollPos;
 
 
 // citation
-  function copyBibtex() {
-    const code = document.querySelector("#citation pre code").innerText;
-    navigator.clipboard.writeText(code);
-    const btn = document.querySelector(".copy-btn");
-    btn.innerText = "✅ Copied!";
-    setTimeout(() => btn.innerText = "📋 Copy", 2000);
+function copyBibtex() {
+  const code = document.querySelector("#citation pre code").innerText;
+  navigator.clipboard.writeText(code);
+  const btn = document.querySelector(".copy-btn");
+  btn.innerText = "✅ Copied!";
+  setTimeout(() => btn.innerText = "📋 Copy", 2000);
+}
+
+
+
+// footer
+const footer = document.getElementById("dynamicFooter");
+
+window.addEventListener("scroll", () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+    footer.classList.add("visible");
+  } else {
+    footer.classList.remove("visible");
   }
-
-
-
-
+});
 
 
 // function select_model(target, dir, dataset, scene) { 

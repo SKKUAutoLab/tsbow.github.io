@@ -210,7 +210,7 @@ summary {
 
 
 
-/* MARK: Scroll Header */
+/* MARK: Header */
 
 body {
   margin: 0;
@@ -270,6 +270,26 @@ body {
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
+
+
+
+/* MARK: Footer */
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.footer.visible {
+  opacity: 1;
+}
+
 
 
 /* MARK: Title */
