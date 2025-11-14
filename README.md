@@ -1,6 +1,7 @@
 <!-- title -->
 <h1 align='center'>
-    TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles Under VariousWeather Conditions
+    TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles
+    <br>Under Various Weather Conditions
 </h1>
 
 
@@ -56,13 +57,11 @@
 
 Scenes from the TSBOW dataset, comprising 198 videos recorded across four distinct scenarios spanning all seasons (sunny/cloudy, haze/fog, rain, snow) over a year. The dataset emphasizes adverse weather conditions and densely populated urban areas with heavy traffic, addressing significant challenges in image degradation and vehicle occlusion.
 
-<video src="https://github.com/SKKUAutoLab/TSBOW/raw/main/videos/road_intersection_conversion.mp4" width="100%" controls></video>
+<video src="videos/road_intersection_conversion.mp4" width="100%" controls></video>
 
-<video src="https://github.com/SKKUAutoLab/TSBOW/raw/main/videos/specialcases_disaster_conversion.mp4" width="100%" controls></video>
+<video src="videos/specialcases_disaster_conversion.mp4" width="100%" controls></video>
 
 ## Overview
-
-### Dataset Statistics
 
 | Statistics | Value |
 |--------|:-------:|
