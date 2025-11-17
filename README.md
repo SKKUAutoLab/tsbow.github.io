@@ -57,9 +57,21 @@
 
 Scenes from the TSBOW dataset, comprising 198 videos recorded across four distinct scenarios spanning all seasons (sunny/cloudy, haze/fog, rain, snow) over a year. The dataset emphasizes adverse weather conditions and densely populated urban areas with heavy traffic, addressing significant challenges in image degradation and vehicle occlusion.
 
-<video src="videos/road_intersection_conversion.mp4" width="100%" controls></video>
+<!-- <video src="videos/road_intersection_conversion.mp4" width="100%" controls></video>-->
+<div class="video-container">
+    <video controls style="width:100%" autoplay loop playsinline muted>
+        <source src="videos/road_intersection_conversion.mp4" type="video/mp4">
+        Video Demo: road_intersection
+    </video>
+</div>
 
-<video src="videos/specialcases_disaster_conversion.mp4" width="100%" controls></video>
+<!-- <video src="videos/specialcases_disaster_conversion.mp4" width="100%" controls></video> -->
+<div class="video-container">
+    <video controls style="width:100%" autoplay loop playsinline muted>
+        <source src="videos/specialcases_disaster_conversion.mp4" type="video/mp4">
+        Video Demo: specialcases_disaster
+    </video>
+</div>
 
 ## Overview
 
