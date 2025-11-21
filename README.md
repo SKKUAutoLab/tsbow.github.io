@@ -74,27 +74,9 @@
 
 ## Abstract
 
-Global warming has intensified the frequency and severity of extreme weather events, which degrade CCTV signal and video quality while disrupting traffic flow, thereby increasing traffic accident rates. Existing datasets, often limited to light haze, rain, and snow, fail to capture extreme weather conditions. To address this gap, this study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive dataset designed to enhance occluded vehicle detection across diverse annual weather scenarios. Comprising over 32 hours of real-world traffic data from densely populated urban areas, TSBOW includes more than 48,000 manually annotated bounding boxes and 3.2 million semi-labeled boxes, spanning eight traffic participant classes from large vehicles to micromobility devices and pedestrians. We establish an object detection benchmark for TSBOW, highlighting challenges posed by occlusions and adverse weather. With its varied road types, scales, and viewpoints, TSBOW serves as a critical resource for advancing Intelligent Transportation Systems. Our findings underscore the potential of CCTV-based traffic monitoring, paving the way for new research and applications. The TSBOW dataset is available at: {https://github.com/SKKUAutoLab/TSBOW}.
+Global warming has intensified the frequency and severity of extreme weather events, which degrade CCTV signal and video quality while disrupting traffic flow, thereby increasing traffic accident rates. Existing datasets, often limited to light haze, rain, and snow, fail to capture extreme weather conditions. To address this gap, this study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive dataset designed to enhance occluded vehicle detection across diverse annual weather scenarios. Comprising over 32 hours of real-world traffic data from densely populated urban areas, TSBOW includes more than 48,000 manually annotated bounding boxes and 3.2 million semi-labeled boxes, spanning eight traffic participant classes from large vehicles to micromobility devices and pedestrians. We establish an object detection benchmark for TSBOW, highlighting challenges posed by occlusions and adverse weather. With its varied road types, scales, and viewpoints, TSBOW serves as a critical resource for advancing Intelligent Transportation Systems. Our findings underscore the potential of CCTV-based traffic monitoring, paving the way for new research and applications. The TSBOW dataset is available at: https://github.com/SKKUAutoLab/TSBOW.
 
-## Introduction
 
-<!-- Scenes from the TSBOW dataset, comprising 198 videos recorded across four distinct scenarios spanning all seasons (sunny/cloudy, haze/fog, rain, snow) over a year. The dataset emphasizes adverse weather conditions and densely populated urban areas with heavy traffic, addressing significant challenges in image degradation and vehicle occlusion. -->
-
-<!-- <video src="videos/road_intersection_conversion.mp4" width="100%" controls></video>-->
-<div class="video-container">
-    <video controls style="width:100%" autoplay loop playsinline muted>
-        <source src="videos/road_intersection_conversion.mp4" type="video/mp4">
-        Video Demo: road_intersection
-    </video>
-</div>
-
-<!-- <video src="videos/specialcases_disaster_conversion.mp4" width="100%" controls></video> -->
-<div class="video-container">
-    <video controls style="width:100%" autoplay loop playsinline muted>
-        <source src="videos/specialcases_disaster_conversion.mp4" type="video/mp4">
-        Video Demo: specialcases_disaster
-    </video>
-</div>
 
 ## Overview
 
@@ -106,6 +88,23 @@ Global warming has intensified the frequency and severity of extreme weather eve
 | 🏷️ **Semi-Annotated Instances** | 71.1M |
 | ✏️ **Manual-Annotated Frames** | 48K |
 | 📦 **Manual-Annotated Instances** | 1.1M |
+
+
+## Dataset Download
+
+We provide scripts to download the TSBOW dataset from HuggingFace. Please refer to the [`download_TSBOW.py`](utils/download_TSBOW.py) script for more details.
+
+
+## References
+
+Thanks to the developers and contributors of the following open-source repositories, whose invaluable work has greatly inspire our project:
+
+- [X-AnyLabeling](https://github.com/CVHub520/X-AnyLabeling): An open-source tool for precise bounding box creation.
+- [Ultralytics YOLO](https://github.com/ultralytics/ultralytics): Detection models for training and real-time inferencing.
+- [YOLOv12](https://github.com/sunsmarterjie/yolov12): A model for object detection.
+
+Our repository is licensed under the **Apache 2.0 License**. However, if you use other components in your work, please follow their license.
+
 
 ## Citation
 
@@ -120,4 +119,3 @@ Global warming has intensified the frequency and severity of extreme weather eve
 }
 ```
 
-## Acknowledgement
