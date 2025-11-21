@@ -91,12 +91,21 @@ Global warming has intensified the frequency and severity of extreme weather eve
 
 <div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
     <img src="images/Github_StatsTable_1x6.png" alt="TSBOW Stats" style="width:100%; height:auto; display:block; border-radius:6px;">
-    <p>Dataset Statistics</p>
+    <p><b>Dataset Statistics</b></p>
 </div>
 
-<div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
-    <img src="images/Figure_Suwon_Camera_Map.png" alt="TSBOW Stats" style="width:50%; height:auto; display:block; border-radius:6px;">
-    <p>Recording Locations</p>
+
+<div align="center" style="max-width:1000px; margin: 10px auto 20px;">
+    <div style="display:flex; gap:18px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:1 1 440px; max-width:58%; text-align:center;">
+            <img src="images/Figure_Suwon_Camera_Map.png" alt="Recording Locations" style="width:100%; height:auto; display:block; border-radius:6px;">
+            <p style="margin:8px 0 0 0; font-weight:600;">Recording Locations</p>
+        </div>
+        <div style="flex:1 1 440px; max-width:44%; text-align:center;">
+            <img src="images/Figure_SunburstChart.png" alt="Video Distribution" style="width:100%; height:auto; display:block; border-radius:6px;">
+            <p style="margin:8px 0 0 0; font-weight:600;">Video Distribution</p>
+        </div>
+    </div>
 </div>
 
 <!-- Table 2x3 for github -->
