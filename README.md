@@ -40,23 +40,17 @@
 
 
 <!-- MARK: URLs -->
-<!-- <div align="center">
-    <br>
-    <a href="https://aaai.org/conference/aaai/aaai-26/">Paper</a>  &emsp;&emsp;
-    <a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main">Hugging Face Dataset</a>  &emsp;&emsp;
-    <a href="https://skkuautolab.github.io/TSBOW/">Website</a>  
-</div> -->
-
 <!-- get img shields at: -->
 <!-- https://shields.io/badges -->
 <!-- check icon at: -->
 <!-- https://github.com/simple-icons/simple-icons/blob/master/slugs.md  -->
+<br> 
 <div align="center">
-  <a href="https://skkuautolab.github.io/TSBOW/"><img src="https://img.shields.io/static/v1?label=TSBOW&message=Website&color=navy"></a>  
-  <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=Main Paper&message=AAAI&color=red"></a>  
-  <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=Supplementary&message=ArXiv&color=green&logo=arxiv"></a>  
-  <a href="https://github.com/SKKUAutoLab/TSBOW"><img src="https://img.shields.io/static/v1?label=Code&message=Github&color=blue&logo=github"></a>   
-  <a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=yellow&logo=huggingface"></a>  
+  <a href="https://skkuautolab.github.io/TSBOW/"><img src="https://img.shields.io/static/v1?label=TSBOW&message=Website&color=fa9f1b"></a>  
+  <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=Main_Paper&message=AAAI&color=green"></a>  
+  <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=Supplementary&message=arXiv&color=FF0066&logo=arxiv"></a>  
+  <a href="https://github.com/SKKUAutoLab/TSBOW"><img src="https://img.shields.io/static/v1?label=Code&message=Github&color=6699FF&logo=github"></a>   
+  <a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=FF6600&logo=huggingface"></a>  
 </div>
 <br>
 
