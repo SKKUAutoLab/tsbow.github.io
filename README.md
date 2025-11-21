@@ -86,4 +86,13 @@ Scenes from the TSBOW dataset, comprising 198 videos recorded across four distin
 
 ## Citation
 
+```
+@article{Huynh_TSBOW_AAAI_2026,
+    title   = {TSBOW: Traffic Surveillance Benchmark for Occluded Vehicles Under Various Weather Conditions},
+    author  = {Ngoc Doan-Minh Huynh, Duong Nguyen-Ngoc Tran, Long Hoang Pham, Tai Huu-Phuong Tran, Huy-Hung Nguyen, Trinh Le Ba Khanh, Chi Dai Tran, Duong Khac Vu, Son Hong Phan, Quoc Pham-Nam Ho, Hyung-Min Jeon, Hyung-Joon Jeon, Jae Wook Jeon},
+    journal = {AAAI 2026},
+    year    = {2025}
+}
+```
+
 ## Acknowledgement
