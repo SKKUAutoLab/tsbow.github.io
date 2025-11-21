@@ -132,7 +132,37 @@ Global warming has intensified the frequency and severity of extreme weather eve
     </table>
 </div> -->
 
-
+<!-- Table 1x6 for poster -->
+<!-- <div align="center">
+    <table style="width: 100%; max-width: 1100px; margin: 30px auto; border-collapse: collapse;">
+        <tr>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #33CCCC; font-weight: bold;">198</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #33CCCC; font-weight: bold;">Processed Videos<br>📹</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #FFCC00; font-weight: bold;">32 h</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FFCC00; font-weight: bold;">Duration<br>⏱️</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #6699FF; font-weight: bold;">3.2 M</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #6699FF; font-weight: bold;">Total Frames<br>🖼️</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #FF6600; font-weight: bold;">71.1 M</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FF6600; font-weight: bold;">Semi-Annotated<br>Instances</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #33CCFF; font-weight: bold;">48 K</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #33CCFF; font-weight: bold;">Manual-Annotated<br>Frames</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #FF0066; font-weight: bold;">1.1 M</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FF0066; font-weight: bold;">Manual-Anotated<br>Instances</p>
+            </td>
+        </tr>
+    </table>
+</div> -->
 
 ## Experiments
 
