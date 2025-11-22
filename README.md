@@ -4,8 +4,8 @@
 </div> -->
 
 <h1 align='center'>
-    TSBOW: Traffic Surveillance Benchmark for Occluded Vehicles
-    Under Various Weather Conditions
+    TSBOW: Traffic Surveillance Benchmark<br> for Occluded Vehicles
+    <br> Under Various Weather Conditions
 </h1>
 
 
