@@ -1,5 +1,6 @@
 Main Color
     navy		#000080
+    white       #FFFFFF
 
 Neon Palettes
     neon green 	#33CCCC 
