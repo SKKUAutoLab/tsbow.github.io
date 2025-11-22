@@ -71,6 +71,8 @@
 
 (All links would be updated on the conference day.)
 
+Please download our Github repo to get better markdown view (i.e. Visual Code).
+
 
 ![TSBOW Dataset Scenes](images/Figure_All_Scenes.png)
 
@@ -94,8 +96,6 @@ Global warming has intensified the frequency and severity of extreme weather eve
 <!-- MARK: Overview -->
 
 ## Overview
-
-Please download our Github repo to get better view.
 
 <div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
     <img src="images/Github_StatsTable_1x6.png" alt="TSBOW Stats" style="width:100%; height:auto; display:block; border-radius:6px;">
