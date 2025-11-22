@@ -190,6 +190,11 @@ Please download our Github repo to get better view.
     <img src="images/Supp_Models_Performances.png" alt="TSBOW Experiments" style="width:100%; height:auto; border-radius:6px; display:block;">
 </div>
 
+<details>
+    <summary>Comparison</summary>\
+</details>
+
+
 
 <!-- MARK: Download -->
 
