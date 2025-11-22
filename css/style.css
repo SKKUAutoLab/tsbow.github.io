@@ -187,11 +187,12 @@ summary {
   font-size: 1.1em;
   /* margin-bottom: 10px; */
   text-align: left;
+  color: #001F3F;
 }
 
 .datasets-comparison-details[open] {
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0 ,0 ,0.1);
 }
 
 
