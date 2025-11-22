@@ -215,11 +215,11 @@ Our repository is licensed under the **Apache 2.0 License**. However, if you use
 
 <!-- ![Star History Chart](https://api.star-history.com/svg?repos=SKKUAutoLab/TSBOW&type=Date) -->
 
-![](https://img.shields.io/github/downloads/SKKUAutoLab/TSBOW/total.svg?style=for-the-badge)
+<!-- ![](https://img.shields.io/github/downloads/SKKUAutoLab/TSBOW/total.svg?style=for-the-badge) -->
 
-<div style="position: relative; display: inline-block;">
+<!-- <div style="position: relative; display: inline-block;">
   <img src="https://api.star-history.com/svg?repos=SKKUAutoLab/TSBOW&type=Date" alt="Star History Graph">
   <img src="icons/TSBOW_icon_white_BG.png" style="position: absolute; top: 10px; left: 310px; width: 30px; height: 30px;" alt="Custom Avatar">
-</div>
+</div> -->
 
 <div align="center"><a href="#top">🔝 Back to Top</a></div>
