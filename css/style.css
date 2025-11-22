@@ -26,7 +26,7 @@
 
 select {
 	margin: 0 auto;
-	color: #000000;
+	color: #001F3F;
 	width: 160px;
 	height: 25px;
 	cursor: pointer;
@@ -87,7 +87,7 @@ section::before {
 
 .caption-figtab{
   font-size: 16px;
-  color: #252599;
+  color: #001F3F;
   margin-top: 9px;
 }
 
@@ -227,7 +227,7 @@ summary {
 }
 
 .download-desc {
-  color: #000000;
+  color: #001F3F;
   font-weight: bold;
   font-size: 1.1em;
   margin: 0 0 20px 0;
@@ -254,7 +254,7 @@ summary {
 .bibtex-box {
   position: relative;
   background-color: #d2d2ff;
-  color: #000000;
+  color: #001F3F;
   border-radius: 10px;
   padding: 20px 30px;
   margin: 30px auto;
