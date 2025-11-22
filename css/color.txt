@@ -1,4 +1,5 @@
-navy		#000080
+Main Color
+    navy		#000080
 
 Neon Palettes
     neon green 	#33CCCC 
@@ -11,6 +12,7 @@ Neon Palettes
 
 Navy Palettes (Ocean Depths)
     deep navy       #001F3F
+    navy            #000080
     vibrant blue    #0074D9
     light blue      #7FDBFF
     light teal      #39CCCC
