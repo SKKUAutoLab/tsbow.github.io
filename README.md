@@ -193,7 +193,7 @@ Please download our Github repo to get better view.
 
 
 <details>
-    <summary>Comparison</summary>
+    <summary>Comparison with other datasets</summary>
 
 <div align="center" style="background:#f4f7fb; padding:18px; border-radius:10px; max-width:1000px; margin: 16px auto;">
     <img src="images/Supp_Comparison_Performances.png" alt="TSBOW Comparison" style="width:100%; height:auto; border-radius:6px; display:block;">
