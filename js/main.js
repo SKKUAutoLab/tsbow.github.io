@@ -73,6 +73,23 @@ document.addEventListener('DOMContentLoaded', function() {
     t2_B.addEventListener('mouseleave', removeHighlight);
   }
   
+  const t1_O = document.querySelector('#tsbow-title .sync-tsbowO');
+  const t2_O = document.querySelector('#titleText .sync-tsbowO');
+  if (t1_O && t2_O) {
+    function addHighlight() {
+      t1_O.classList.add('highlight');
+      t2_O.classList.add('highlight');
+    }
+    function removeHighlight() {
+      t1_O.classList.remove('highlight');
+      t2_O.classList.remove('highlight');
+    }
+    t1_O.addEventListener('mouseenter', addHighlight);
+    t1_O.addEventListener('mouseleave', removeHighlight);
+    t2_O.addEventListener('mouseenter', addHighlight);
+    t2_O.addEventListener('mouseleave', removeHighlight);
+  }
+  
   
 });
 
