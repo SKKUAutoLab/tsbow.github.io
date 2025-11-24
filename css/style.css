@@ -1,3 +1,4 @@
+
 .before,
 .after {
   margin: 0;
@@ -430,7 +431,7 @@ body {
     /* margin-right: -1px;  */
 }
 
-#tsbow-title span:hover {
+/* #tsbow-title span:hover {
     color: #000080;
     transform: scale(1.3) rotate(5deg);
     text-shadow: 
@@ -438,6 +439,12 @@ body {
       0 0 8px rgba(65, 105, 225, 0.4),
       0 0 12px rgba(100, 149, 237, 0.2);
     filter: drop-shadow(0 0 1px rgba(0, 0, 219, 0.5));
+} */
+
+/* Synchronized highlight for T in title and subtitle */
+.sync-tsbowT.highlight, .sync-tsbowT:hover {
+  filter: drop-shadow(0 0 8px #FFCC00) brightness(1.1);
+  transition: filter 0.2s;
 }
 
 /* -- Traffic Surveillance... */

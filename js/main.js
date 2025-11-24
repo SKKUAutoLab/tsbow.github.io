@@ -1,4 +1,4 @@
-base_url = "https://huggingface.co/datasets/skku-autolab/TSBOW"
+// base_url = "https://huggingface.co/datasets/skku-autolab/TSBOW"
 
 
 // title
@@ -20,7 +20,28 @@ base_url = "https://huggingface.co/datasets/skku-autolab/TSBOW"
 // title.innerHTML = title.textContent.replace(/([A-Z])/g, '<span class="uuc">$1</span>');
 
 
-// header - scroll to top on logo/TSBOW click
+// MARK: Title - Synchronize hover 
+document.addEventListener('DOMContentLoaded', function() {
+  const t1 = document.querySelector('#tsbow-title .sync-tsbowT');
+  const t2 = document.querySelector('#titleText .sync-tsbowT');
+  if (t1 && t2) {
+    function addHighlight() {
+      t1.classList.add('highlight');
+      t2.classList.add('highlight');
+    }
+    function removeHighlight() {
+      t1.classList.remove('highlight');
+      t2.classList.remove('highlight');
+    }
+    t1.addEventListener('mouseenter', addHighlight);
+    t1.addEventListener('mouseleave', removeHighlight);
+    t2.addEventListener('mouseenter', addHighlight);
+    t2.addEventListener('mouseleave', removeHighlight);
+  }
+});
+
+
+// MARK: header - scroll to top on logo/TSBOW click
 const headerLeft = document.querySelector(".header-left");
 if (headerLeft) {
     headerLeft.style.cursor = "pointer";
@@ -59,7 +80,7 @@ prevScrollPos = currentScrollPos;
 });
 
 
-// citation
+// MARK: citation
 function copyBibtex() {
   const code = document.querySelector("#citation pre code").innerText;
   navigator.clipboard.writeText(code);
@@ -70,7 +91,7 @@ function copyBibtex() {
 
 
 
-// footer
+// MARK: footer
 const footer = document.getElementById("dynamicFooter");
 
 window.addEventListener("scroll", () => {
