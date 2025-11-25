@@ -106,6 +106,19 @@ document.addEventListener('DOMContentLoaded', function() {
     t2_W.addEventListener('mouseenter', addHighlight);
     t2_W.addEventListener('mouseleave', removeHighlight);
   }
+
+  // Highlight all title letters when hovering the main page logo
+  const pageLogo = document.querySelector('img[src*="TSBOW_icon_white_BG.png"]');
+  const letterSelectors = '.sync-tsbowT, .sync-tsbowS, .sync-tsbowB, .sync-tsbowO, .sync-tsbowW';
+  if (pageLogo) {
+    const letters = document.querySelectorAll(letterSelectors);
+    pageLogo.addEventListener('mouseenter', () => {
+      letters.forEach(el => el.classList.add('highlight'));
+    });
+    pageLogo.addEventListener('mouseleave', () => {
+      letters.forEach(el => el.classList.remove('highlight'));
+    });
+  }
 });
 
 

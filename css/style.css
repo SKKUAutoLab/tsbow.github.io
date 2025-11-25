@@ -418,7 +418,7 @@ body {
 
 /* MARK: Title */
 
-/* -- TSBOW -- */
+/* -- TSBOW title -- */
 #tsbow-title span {
     display: inline;
     transition: 
@@ -430,7 +430,7 @@ body {
     /* margin-right: -1px;  */
 }
 
-/* -- Traffic Surveillance... */
+/* -- TSBOW name: Traffic Surveillance... */
 /* Synchronized highlight for T in title and subtitle */
 .sync-tsbowT.highlight, .sync-tsbowT:hover {
   filter: drop-shadow(0 0 8px #FFCC00) brightness(1.1);
