@@ -361,7 +361,7 @@ body {
 
 .header-left .logo {
   /* width: 45px; */
-  height: 45px;
+  height: 35px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
