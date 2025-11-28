@@ -87,7 +87,7 @@ Please download our Github repo to get better markdown view (i.e. Visual Code).
 <!-- + [2025.12.31] 🔥 Our paper, code and TSBOW dataset are released! -->
 
 + [2025.11.11] 🔥 Our code and website are released!
-+ [2025.11.08] 🎉 TSBOW has been accepted to AAAI 2026!
++ [2025.11.08] 🎉 **<span style="color: #FFCC00">T</span><span style="color: #33CCCC">S</span><span style="color: #FF6600">B</span><span style="color: #6699FF">O</span><span style="color: #FF0066">W</span>** has been accepted to **AAAI 2026**!
 
 
 <!-- MARK: Abstract -->
@@ -292,3 +292,8 @@ Our repository is licensed under the **Apache 2.0 License**. However, if you use
 </div> -->
 
 <div align="center"><a href="#top">🔝 Back to Top</a></div>
+
+
+
+
+<!-- https://search.google.com/search-console/ownership?resource_id=https%3A%2F%2Fskkuautolab.github.io%2FTSBOW%2F -->
